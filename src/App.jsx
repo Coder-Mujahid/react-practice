@@ -16,7 +16,11 @@ function App() {
       <Condition name="react" state={false} next="jsx"></Condition>
       <Condition name="react" state={true} next="jsx"></Condition> */}
 
-      
+      <h2 className={`${h2}`}>conditional rendering prictice</h2>
+      <Call name="mujahid"></Call>
+      {
+        student.map(data =><Call name={data}> </Call>)
+      }
     </>
   )
 }
