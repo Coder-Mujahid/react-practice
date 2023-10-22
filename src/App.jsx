@@ -9,7 +9,7 @@ function App() {
   // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
 
   const data=[
-    {name:'nerob',age:18,gender:'male'},
+    {name:'nerob',age:'20',gender:'male'},
     {name:'mujahid',age:18,gender:'male'},
     {name:'mahmudul',age:18,gender:'male'},
     {name:'samim',age:18,gender:'male'},
