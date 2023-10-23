@@ -5,6 +5,7 @@ import Call from './Call';
 import Student from './Student';
 import Event from './Event';
 import Counter from './Counter';
+import Players from './Players';
 
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -40,7 +41,10 @@ function App() {
 
       {/* <Event></Event> */}
 
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+
+
+      <Players></Players>
 
     </>
   )
