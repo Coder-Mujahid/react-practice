@@ -3,6 +3,7 @@ import './Condition'
 import Condition from './Condition';
 import Call from './Call';
 import Student from './Student';
+import Event from './Event';
 
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -31,10 +32,12 @@ function App() {
       {
         student.map(data =><Call name={data}> </Call>)
       } */}
-      <h2 className={`${h2}`}>array ob object calling</h2>
+      {/* <h2 className={`${h2}`}>array ob object calling</h2>
       {
         data.map(data =><Student details={data}></Student>)
-      }
+      } */}
+
+      <Event></Event>
 
     </>
   )

@@ -45,7 +45,7 @@
 
 //   }
 
-// conditional rendering 03 with ternary oparetor
+// conditional rendering 03 with ternary oparetor (most use conditional rendering)
 // export default function Condition({ name, state }) {
 //     const h2 =
 //       "md:text-xl text-lg font-bold text-center py-5 uppercase text-slate-700";
