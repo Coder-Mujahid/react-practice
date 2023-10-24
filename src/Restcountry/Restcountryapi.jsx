@@ -15,7 +15,6 @@ export default function Restcountryapi() {
     }, [])
   return (
     <div>
-        <h2>data length : {country.length}</h2>
         <div className="grid grid-cols-3 w-11/12 gap-3 mx-auto p-5 bg-gradient-to-r from-cyan-50 to-blue-300">
         {
             country.map(country => <Restapidata country={country}></Restapidata>)
