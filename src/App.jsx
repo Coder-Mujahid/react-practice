@@ -10,6 +10,7 @@ import Useeffect from './Useeffect';
 import Restcountryapi from './Restcountry/Restcountryapi';
 import DropdownButton from './DropdownButton';
 import Abc from './Abc';
+import LoadDataByCategory from './LoadDataByCategory';
 
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -63,7 +64,10 @@ function App() {
 
 
 
-      <Abc></Abc>
+      {/* <Abc></Abc> */}
+
+
+      <LoadDataByCategory></LoadDataByCategory>
 
     </>
   )
