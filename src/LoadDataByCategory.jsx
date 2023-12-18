@@ -5,20 +5,34 @@ const LoadDataByCategory = () => {
   const [technology, setTechnology] = useState([]);
   const [Ftechnology, setFTechnology] = useState([]);
 
-  useEffect(() => {
-    // Fetch the teacher data from the public folder
-    const fetchData = async () => {
-      try {
-        const response = await fetch("../public/Data.json");
-        const data = await response.json();
-        setTeachers(data);
-      } catch (error) {
-        console.error("Error fetching teacher data:", error);
-      }
-    };
+//   data fatching system 01 ----------------------------------------------
+//   useEffect(() => {
+//     // Fetch the teacher data from the public folder
+//     const fetchData = async () => {
+//       try {
+//         const response = await fetch("../public/Data.json");
+//         const data = await response.json();
+//         setTeachers(data);
+//       } catch (error) {
+//         console.error("Error fetching teacher data:", error);
+//       }
+//     };
 
-    fetchData();
+//     fetchData();
+//   }, []);
+// --------------------------------------------------------------------
+
+//   data fatching system 02 ----------------------------------------------
+useEffect(() => {
+    fetch("../public/Data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Fetched Data:', data);
+        setTeachers(data);
+      })
+      .catch((error) => console.error('Error fetching teacher data:', error));
   }, []);
+// ----------------------------------------------------------------------
 
   useEffect(() => {
     // Filter teachers in the 'computer' category
