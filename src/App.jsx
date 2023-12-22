@@ -11,6 +11,7 @@ import Restcountryapi from './Restcountry/Restcountryapi';
 import DropdownButton from './DropdownButton';
 import Abc from './Abc';
 import LoadDataByCategory from './LoadDataByCategory';
+import ParticleComponent from './ParticleComponent';
 
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -67,7 +68,13 @@ function App() {
       {/* <Abc></Abc> */}
 
 
-      <LoadDataByCategory></LoadDataByCategory>
+      {/* <LoadDataByCategory></LoadDataByCategory> */}
+
+      <div className=' w-screen h-screen'>
+      <h2 className=' w-full h-screen bg-slate-200'>mujahid</h2>
+      <ParticleComponent></ParticleComponent>
+
+      </div>
 
     </>
   )
