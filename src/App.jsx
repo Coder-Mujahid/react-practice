@@ -68,13 +68,11 @@ function App() {
       {/* <Abc></Abc> */}
 
 
-      {/* <LoadDataByCategory></LoadDataByCategory> */}
 
-      <div className=' w-screen h-screen'>
-      <h2 className=' w-full h-screen bg-slate-200'>mujahid</h2>
-      <ParticleComponent></ParticleComponent>
-
-      </div>
+      <div className="app-container">
+      <h1>Your React Particle Background App</h1>
+      <ParticleComponent />
+    </div>
 
     </>
   )

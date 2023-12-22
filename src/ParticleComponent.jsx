@@ -1,12 +1,13 @@
+// ParticleComponent.js
 import Particles from 'react-tsparticles';
+import './App.css'
+
 
 const ParticleComponent = () => {
   return (
     <Particles
       id="tsparticles"
       options={{
-        // Specify your particle options here
-        // Example:
         particles: {
           number: {
             value: 80,
@@ -21,3 +22,4 @@ const ParticleComponent = () => {
 };
 
 export default ParticleComponent;
+
