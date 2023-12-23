@@ -13,6 +13,7 @@ import Abc from './Abc';
 import LoadDataByCategory from './LoadDataByCategory';
 import ParticleComponent from './ParticleComponent';
 import PaginatedData from './PaginatedData';
+import PaginatedDatawithmodal from './PaginatedDatawithmodal';
 
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -76,7 +77,11 @@ function App() {
     </div> */}
 
 
-    <PaginatedData></PaginatedData>
+    {/* <PaginatedData></PaginatedData> */}
+
+
+
+    <PaginatedDatawithmodal></PaginatedDatawithmodal>
 
     </>
   )
