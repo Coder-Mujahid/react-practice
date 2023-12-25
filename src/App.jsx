@@ -15,7 +15,7 @@ import ParticleComponent from './ParticleComponent';
 import PaginatedData from './PaginatedData';
 import PaginatedDatawithmodal from './PaginatedDatawithmodal';
 import IPtracker from './IPtracker';
-
+import Particale from './Particale';
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
   // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
@@ -31,6 +31,7 @@ function App() {
   return (
 
     <>
+    <Particale></Particale>
       {/* <h2 className={`${h2}`}>conditional rendering prictice</h2>
       <Condition name="react" state={true} next="jsx"></Condition>
       <Condition name="react" state={false} next="jsx"></Condition>
@@ -49,8 +50,7 @@ function App() {
       } */}
 
       {/* <Event></Event> */}
-
-      {/* <Counter></Counter> */}
+      <Counter></Counter>
 
 
       {/* <Players></Players> */}
@@ -86,7 +86,7 @@ function App() {
 
 
 
-    <IPtracker></IPtracker>
+    {/* <IPtracker></IPtracker> */}
 
     </>
   )
