@@ -14,6 +14,7 @@ import LoadDataByCategory from './LoadDataByCategory';
 import ParticleComponent from './ParticleComponent';
 import PaginatedData from './PaginatedData';
 import PaginatedDatawithmodal from './PaginatedDatawithmodal';
+import IPtracker from './IPtracker';
 
 function App() {
   const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -81,7 +82,11 @@ function App() {
 
 
 
-    <PaginatedDatawithmodal></PaginatedDatawithmodal>
+    {/* <PaginatedDatawithmodal></PaginatedDatawithmodal> */}
+
+
+
+    <IPtracker></IPtracker>
 
     </>
   )
