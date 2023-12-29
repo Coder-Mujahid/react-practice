@@ -23,6 +23,7 @@ import i18n from './i18n';
 
 import LanguageSwitcher from './LanguageSwitcher';
 import YourMainComponent from './YourMainComponent';
+import TransitionGroupExample from './TransitionGroupExample';
 function App() {
   // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
   // // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
@@ -100,11 +101,15 @@ function App() {
     {/* <Players></Players> */}
 
 
+{/* 
+
 
     <I18nextProvider i18n={i18n}>
      <YourMainComponent></YourMainComponent>
-    </I18nextProvider>
+    </I18nextProvider> */}
 
+
+    <TransitionGroupExample></TransitionGroupExample>
     </>
   )
 }
