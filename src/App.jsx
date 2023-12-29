@@ -1,37 +1,38 @@
 import './App.css'
 import './Condition'
-import Condition from './Condition';
-import Call from './Call';
-import Student from './Student';
-import Event from './Event';
-import Counter from './Counter';
-import Players from './Players';
-import Useeffect from './Useeffect';
-import Restcountryapi from './Restcountry/Restcountryapi';
-import DropdownButton from './DropdownButton';
-import Abc from './Abc';
-import LoadDataByCategory from './LoadDataByCategory';
-import ParticleComponent from './ParticleComponent';
-import PaginatedData from './PaginatedData';
-import PaginatedDatawithmodal from './PaginatedDatawithmodal';
-import IPtracker from './IPtracker';
-import Particale from './Particale';
+// import Condition from './Condition';
+// import Call from './Call';
+// import Student from './Student';
+// import Event from './Event';
+// import Counter from './Counter';
+// import Players from './Players';
+// import Useeffect from './Useeffect';
+// import Restcountryapi from './Restcountry/Restcountryapi';
+// import DropdownButton from './DropdownButton';
+// import Abc from './Abc';
+// import LoadDataByCategory from './LoadDataByCategory';
+// import ParticleComponent from './ParticleComponent';
+// import PaginatedData from './PaginatedData';
+// import PaginatedDatawithmodal from './PaginatedDatawithmodal';
+// import IPtracker from './IPtracker';
+// import Particale from './Particale';
+import LanguageSwitcher from './LanguageSwitcher';
 function App() {
-  const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
-  // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
+  // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
+  // // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
 
-  const data=[
-    {name:'nerob',age:'20',gender:'male'},
-    {name:'mujahid',age:18,gender:'male'},
-    {name:'mahmudul',age:18,gender:'male'},
-    {name:'samim',age:18,gender:'male'},
-    {name:'sabbir',age:18,gender:'male'},
-    {name:'alamgir',age:18,gender:'male'}
-  ]
+  // const data=[
+  //   {name:'nerob',age:'20',gender:'male'},
+  //   {name:'mujahid',age:18,gender:'male'},
+  //   {name:'mahmudul',age:18,gender:'male'},
+  //   {name:'samim',age:18,gender:'male'},
+  //   {name:'sabbir',age:18,gender:'male'},
+  //   {name:'alamgir',age:18,gender:'male'}
+  // ]
   return (
 
     <>
-    <Particale></Particale>
+    {/* <Particale></Particale> */}
       {/* <h2 className={`${h2}`}>conditional rendering prictice</h2>
       <Condition name="react" state={true} next="jsx"></Condition>
       <Condition name="react" state={false} next="jsx"></Condition>
@@ -50,7 +51,7 @@ function App() {
       } */}
 
       {/* <Event></Event> */}
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
 
 
       {/* <Players></Players> */}
@@ -87,6 +88,11 @@ function App() {
 
 
     {/* <IPtracker></IPtracker> */}
+
+    <LanguageSwitcher></LanguageSwitcher>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt atque tempora similique quidem est officia culpa cupiditate illum, dolorum corrupti autem accusamus adipisci soluta sit dolore asperiores fugit fuga vitae?</p>
 
     </>
   )
