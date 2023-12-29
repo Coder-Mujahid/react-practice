@@ -1,29 +1,19 @@
-import  { useState } from 'react';
+// LanguageSwitcher.js
+import { useTranslation } from 'react-i18next';
 
-const LanguageSwitcher = () => {
-  // State to track the current language
-  const [currentLanguage, setCurrentLanguage] = useState('english');
+function LanguageSwitcher() {
+  const { i18n } = useTranslation();
 
-  // Function to toggle the language
-  const toggleLanguage = () => {
-    // Update the language based on the current value
-    const newLanguage = currentLanguage === 'english' ? 'bangla' : 'english';
-    setCurrentLanguage(newLanguage);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
     <div>
-      {/* Display content based on the current language */}
-      {currentLanguage === 'english' ? (
-        <p>This is English content.</p>
-      ) : (
-        <p>এটি বাংলা কনটেন্ট।</p>
-      )}
-
-      {/* Button to toggle language */}
-      <button onClick={toggleLanguage}>Toggle Language</button>
+      <button onClick={() => changeLanguage('en')}>English</button>
+      <button onClick={() => changeLanguage('bn')}>বাংলা</button>
     </div>
   );
-};
+}
 
 export default LanguageSwitcher;
