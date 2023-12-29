@@ -9,9 +9,9 @@ function LanguageSwitcher() {
   };
 
   return (
-    <div>
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('bn')}>বাংলা</button>
+    <div className=' flex justify-end w-11/12 mx-auto gap-5 '>
+      <button className=' bg-red-300 px-3 py-2 max-w-3xl rounded-md ' onClick={() => changeLanguage('en')}>English</button>
+      <button className=' bg-red-300 px-3 py-2 max-w-3xl rounded-md ' onClick={() => changeLanguage('bn')}>বাংলা</button>
     </div>
   );
 }
