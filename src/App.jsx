@@ -16,6 +16,11 @@ import './Condition'
 // import PaginatedDatawithmodal from './PaginatedDatawithmodal';
 // import IPtracker from './IPtracker';
 // import Particale from './Particale';
+
+
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
+
 import LanguageSwitcher from './LanguageSwitcher';
 function App() {
   // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
@@ -54,7 +59,6 @@ function App() {
       {/* <Counter></Counter> */}
 
 
-      {/* <Players></Players> */}
 
       {/* <Useeffect></Useeffect> */}
 
@@ -89,10 +93,16 @@ function App() {
 
     {/* <IPtracker></IPtracker> */}
 
-    <LanguageSwitcher></LanguageSwitcher>
+    {/* <LanguageSwitcher></LanguageSwitcher> */}
 
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt atque tempora similique quidem est officia culpa cupiditate illum, dolorum corrupti autem accusamus adipisci soluta sit dolore asperiores fugit fuga vitae?</p>
+    {/* <Players></Players> */}
+
+
+
+    <I18nextProvider i18n={i18n}>
+
+    </I18nextProvider>
 
     </>
   )
