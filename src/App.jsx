@@ -18,12 +18,13 @@ import './Condition'
 // import Particale from './Particale';
 
 
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
+// import { I18nextProvider } from 'react-i18next';
+// import i18n from './i18n';
 
-import LanguageSwitcher from './LanguageSwitcher';
-import YourMainComponent from './YourMainComponent';
-import TransitionGroupExample from './TransitionGroupExample';
+// import LanguageSwitcher from './LanguageSwitcher';
+// import YourMainComponent from './YourMainComponent';
+// import TransitionGroupExample from './TransitionGroupExample';
+import Calculator from './Calculator';
 function App() {
   // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
   // // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
@@ -109,7 +110,12 @@ function App() {
     </I18nextProvider> */}
 
 
-    <TransitionGroupExample></TransitionGroupExample>
+    {/* <TransitionGroupExample></TransitionGroupExample> */}
+
+
+
+    <Calculator></Calculator>
+
     </>
   )
 }
