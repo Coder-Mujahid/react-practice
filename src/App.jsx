@@ -25,6 +25,7 @@ import './Condition'
 // import YourMainComponent from './YourMainComponent';
 // import TransitionGroupExample from './TransitionGroupExample';
 import Calculator from './Calculator';
+import TicTacToe from './TicTacToe';
 function App() {
   // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
   // // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
@@ -113,8 +114,12 @@ function App() {
     {/* <TransitionGroupExample></TransitionGroupExample> */}
 
 
+{/* this is a calculater */}
+    {/* <Calculator></Calculator> */}
 
-    <Calculator></Calculator>
+
+
+    <TicTacToe></TicTacToe>
 
     </>
   )
