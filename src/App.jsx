@@ -27,6 +27,7 @@ import './Condition'
 import Calculator from './Calculator';
 import TicTacToe from './TicTacToe';
 import CounterAlart from './CounterAlart';
+import AgeCalculator from './AgeCalculator';
 function App() {
   // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
   // // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
@@ -125,7 +126,15 @@ function App() {
 
     {/* this is CounterAlart component */}
 
-    <CounterAlart></CounterAlart>
+    {/* <CounterAlart></CounterAlart> */}
+
+
+
+
+    {/* this is age calculetor */}
+
+
+    <AgeCalculator></AgeCalculator>
 
     </>
   )
