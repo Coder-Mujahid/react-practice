@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 const CGPACalculator = () => {
   const [semesterGPAs, setSemesterGPAs] = useState(Array(8).fill(''));
 
-  const calculateCGPA = () => {
-    const totalGPAs = semesterGPAs.reduce((acc, gpa) => acc + parseFloat(gpa) || 0, 0);
-    const cgpa = (totalGPAs / 8).toFixed(2);
+  const calculateWeightedCGPA = () => {
+    const weights = [5, 5, 5, 15, 15, 20, 25, 10];
+    const totalWeightedGPAs = semesterGPAs.reduce((acc, gpa, index) => acc + (parseFloat(gpa) || 0) * weights[index], 0);
+    const totalWeight = weights.reduce((acc, weight) => acc + weight, 0);
+    const cgpa = (totalWeightedGPAs / totalWeight).toFixed(2);
     return isNaN(cgpa) ? 'N/A' : cgpa;
   };
 
@@ -39,7 +41,7 @@ const CGPACalculator = () => {
 
         <button
           className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
-          onClick={() => alert(`Your CGPA is: ${calculateCGPA()}`)}
+          onClick={() => alert(`Your CGPA is: ${calculateWeightedCGPA()}`)}
         >
           Calculate CGPA
         </button>
