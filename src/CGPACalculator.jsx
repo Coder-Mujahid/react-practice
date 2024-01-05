@@ -2,13 +2,11 @@
 import React, { useState } from 'react';
 
 const CGPACalculator = () => {
-  const [semesterCredits, setSemesterCredits] = useState(Array(8).fill(0));
-  const [semesterGrades, setSemesterGrades] = useState(Array(8).fill(0));
+  const [semesterGPAs, setSemesterGPAs] = useState(Array(8).fill(''));
 
   const calculateCGPA = () => {
-    const totalCredits = semesterCredits.reduce((acc, credits) => acc + credits, 0);
-    const weightedSum = semesterGrades.reduce((acc, grade, index) => acc + (grade / 100) * semesterCredits[index], 0);
-    const cgpa = (weightedSum / totalCredits).toFixed(2);
+    const totalGPAs = semesterGPAs.reduce((acc, gpa) => acc + parseFloat(gpa) || 0, 0);
+    const cgpa = (totalGPAs / 8).toFixed(2);
     return isNaN(cgpa) ? 'N/A' : cgpa;
   };
 
@@ -22,33 +20,20 @@ const CGPACalculator = () => {
             <label className="block text-sm font-medium text-gray-700">
               Semester {index + 1}:
             </label>
-            <div className="flex items-center space-x-4 mt-2">
-              <input
-                type="number"
-                min="0"
-                className="border rounded-md p-2 w-16 focus:outline-none focus:border-blue-500"
-                placeholder="Credits"
-                value={semesterCredits[index]}
-                onChange={(e) => {
-                  const newCredits = [...semesterCredits];
-                  newCredits[index] = parseInt(e.target.value, 10) || 0;
-                  setSemesterCredits(newCredits);
-                }}
-              />
-              <input
-                type="number"
-                min="0"
-                max="100"
-                className="border rounded-md p-2 w-16 focus:outline-none focus:border-blue-500"
-                placeholder="Grade %"
-                value={semesterGrades[index]}
-                onChange={(e) => {
-                  const newGrades = [...semesterGrades];
-                  newGrades[index] = parseInt(e.target.value, 10) || 0;
-                  setSemesterGrades(newGrades);
-                }}
-              />
-            </div>
+            <input
+              type="number"
+              step="0.01"
+              min="0"
+              max="4"
+              className="border rounded-md p-2 w-24 focus:outline-none focus:border-blue-500"
+              placeholder="CGPA (max 4.00)"
+              value={semesterGPAs[index]}
+              onChange={(e) => {
+                const newGPAs = [...semesterGPAs];
+                newGPAs[index] = e.target.value;
+                setSemesterGPAs(newGPAs);
+              }}
+            />
           </div>
         ))}
 
