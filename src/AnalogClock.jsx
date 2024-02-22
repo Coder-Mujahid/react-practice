@@ -17,41 +17,32 @@ const AnalogClock = () => {
 
   // Calculate the position of each number around the clock face
   const numberPositions = Array.from(Array(12).keys()).map((index) => {
-    const angle = (index * 30) % 360;
+    const angle = ((2 - index) * 30) % 360; // Adjusted to start from 12 o'clock and go counter-clockwise
     const radians = (angle * Math.PI) / 180;
-    const x = Math.cos(radians) * 110; // Extend the distance from the center
-    const y = Math.sin(radians) * 110; // Extend the distance from the center
+    const radius = 110; // Distance from the center
+    const x = Math.cos(radians) * radius;
+    const y = Math.sin(radians) * radius;
     return { x, y };
   });
+  
+  
+  
 
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-64 h-64 relative flex bg-red-400">
         <div className="w-full h-full rounded-full border-4 border-gray-300 relative bg-stone-500">
-          {/* Clock marks */}
-          {Array.from(Array(60).keys()).map((index) => (
-            <div
-              key={index}
-              className={`absolute w-1 h-1 bg-black rounded-full ${
-                index % 5 === 0 ? 'w-2 h-2' : ''
-              }`}
-              style={{
-                transform: `rotate(${index * 6}deg) translate(-50%, -50%)`,
-                top: '50%',
-                left: '50%',
-              }}
-            ></div>
-          ))}
           {/* Clock numbers */}
           {numberPositions.map(({ x, y }, index) => (
             <div
               key={index}
               className="absolute text-black text-center"
               style={{
-                top: `calc(45% - ${y}px)`,
-                left: `calc(45% + ${x}px)`,
+                top: `calc(45% - ${y}px)`, // Adjusting the positioning
+                left: `calc(45% + ${x}px)`, // Adjusting the positioning
                 width: '24px',
                 height: '24px',
+                transform: `rotate(${-((index + 1) * 0)}deg)`, // Adjusting the rotation
               }}
             >
               {index + 1}
