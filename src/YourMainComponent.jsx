@@ -12,7 +12,7 @@ function YourMainComponent() {
       <p>{t('content')}</p>
       <p>{t('notes')}</p>
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem veritatis impedit odio, placeat adipisci ex nulla nemo quis porro obcaecati est perspiciatis voluptates quos dignissimos quas enim perferendis quidem totam.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem veritatis impedit odio, placeat adipisci ex nulla nemo quis porro obcaecati est perspiciatis voluptates quos dignissimos quas enim
     </div>
   );
 }
