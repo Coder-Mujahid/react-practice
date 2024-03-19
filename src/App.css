@@ -1,4 +1,10 @@
 /* App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+body {
+  font-family: 'Chakra Petch', sans-serif;
+}
 .app-container {
     position: relative;
     width: 100vw;

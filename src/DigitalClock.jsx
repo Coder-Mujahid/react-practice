@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import '../src/App.css'
 
 const DigitalClock = () => {
   const [time, setTime] = useState(new Date());
@@ -16,14 +17,18 @@ const DigitalClock = () => {
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
-      hour12: false,
+      hour12: true,
     });
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="bg-gray-800 flex items-center justify-center text-white font-semibold text-4xl p-4 rounded-md">
-        {formatTime(time)}
+    <div className="flex Digital justify-center items-center h-screen">
+      <div className="bg-[#9DA59E] w-6/12 h-60 rounded-xl  shadow-inner shadow-slate-600 font-semibold py-4 px-9 flex items-center  border-[30px] border-slate-800">
+        {formatTime(time).split('').map((char, index) => (
+          <span key={index} className=" w-full rounded-2xl text-[#11243F]  text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl">
+            {char}
+          </span>
+        ))}
       </div>
     </div>
   );
