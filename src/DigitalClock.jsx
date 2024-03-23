@@ -23,7 +23,7 @@ const DigitalClock = () => {
 
   return (
     <div className="flex Digital justify-center items-center h-screen">
-      <div className="bg-[#9DA59E] w-6/12 h-60 rounded-xl shadow-inner shadow-slate-600 font-semibold py-4 px-9 flex items-center  border-[30px] border-slate-800">
+      <div className="bg-[#9DA59E] w-6/12 h-60 rounded-xl shadow-inner shadow-slate-500 font-semibold py-4 px-9 flex items-center  border-[30px] border-slate-800">
         {formatTime(time).split('').map((char, index) => (
           <span key={index} className=" w-full rounded-2xl text-[#11243F]  text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl" style={{
     textShadow: '2px 0px 10px rgba(12,230,39,0.6)'
