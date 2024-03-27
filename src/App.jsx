@@ -1,4 +1,5 @@
 import './App.css'
+import CoinToss from './CoinToss';
 import './Condition'
 // import Condition from './Condition';
 // import Call from './Call';
@@ -153,7 +154,11 @@ function App() {
 
 
 
-    <DigitalClock></DigitalClock>
+    {/* <DigitalClock></DigitalClock> */}
+
+
+
+    <CoinToss></CoinToss>
     </>
   )
 }
