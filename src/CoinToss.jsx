@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import bgr from '../public/img/money_6133156.png'; // Correct path to the image
-
 const CoinToss = () => {
   const [side, setSide] = useState(null);
 
@@ -13,8 +11,8 @@ const CoinToss = () => {
     <div className="w-10/12 mx-auto flex flex-col items-center justify-center h-screen">
       <h2 className="text-black text-4xl font-bold mb-10">CoinToss</h2>
 
-      <div className="w-32 h-32 bg-black bg-[url('{bgr}')] rounded-full border-4 border-gray-700 flex items-center justify-center mb-4">
-        {side && <span className="text-4xl">{side}</span>}
+      <div className="w-32 h-32 rounded-full border-4 border-gray-700 flex items-center justify-center mb-4" style={{ backgroundImage: `url(https://i.ibb.co/SfMNt9z/money-6133156.png)`, backgroundSize: 'cover' }}>
+        {side && <span className="text-3xl font-bold text-blue-800">{side}</span>}
       </div>
 
       <button
