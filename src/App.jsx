@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css'
 import CoinToss from './CoinToss';
 import './Condition'
@@ -31,8 +32,20 @@ import './Condition'
 // import AgeCalculator from './AgeCalculator';
 // import CGPACalculator from './CGPACalculator';
 // import AnalogClock from './AnalogClock';
-import DigitalClock from './DigitalClock';
+// import DigitalClock from './DigitalClock';
+import Loader from './Loader';
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after 2 seconds
+    }, 2000);
+
+    // Clean up the timer
+    return () => clearTimeout(timer);
+  }, []);
   // const h2 ='md:text-5xl text-2xl font-bold text-center py-5 uppercase text-slate-700';
   // // const student=['nerob','mujahid','mahmudul','samim','sabbir','alamgir']
 
@@ -46,7 +59,12 @@ function App() {
   // ]
   return (
 
-    <>
+    <div>
+    {/* Conditionally render the loader if loading is true */}
+    {loading ? (
+      <Loader />
+    ) : (
+      <div>
     {/* <Particale></Particale> */}
       {/* <h2 className={`${h2}`}>conditional rendering prictice</h2>
       <Condition name="react" state={true} next="jsx"></Condition>
@@ -159,7 +177,13 @@ function App() {
 
 
     <CoinToss></CoinToss>
-    </>
+    <Loader></Loader>
+
+      </div>
+    )}
+  </div>
+
+
   )
 }
 
