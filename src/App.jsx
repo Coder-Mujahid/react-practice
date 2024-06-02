@@ -29,11 +29,13 @@ import './Condition'
 // import Calculator from './Calculator';
 // import TicTacToe from './TicTacToe';
 // import CounterAlart from './CounterAlart';
-// import AgeCalculator from './AgeCalculator';
+import AgeCalculator from './AgeCalculator';
 // import CGPACalculator from './CGPACalculator';
 // import AnalogClock from './AnalogClock';
 // import DigitalClock from './DigitalClock';
 import Loader from './Loader';
+import Portfolio from './Portfolio';
+import Loading from './Loading';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -65,6 +67,7 @@ function App() {
       <Loader />
     ) : (
       <div>
+      <Loading></Loading>
     {/* <Particale></Particale> */}
       {/* <h2 className={`${h2}`}>conditional rendering prictice</h2>
       <Condition name="react" state={true} next="jsx"></Condition>
@@ -176,8 +179,10 @@ function App() {
 
 
 
-    <CoinToss></CoinToss>
-    <Loader></Loader>
+    {/* <CoinToss></CoinToss> */}
+    {/* <Loader></Loader> */}
+
+    {/* <Portfolio></Portfolio> */}
 
       </div>
     )}

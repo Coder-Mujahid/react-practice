@@ -92,3 +92,30 @@ body {
   border: 1px solid #ccc;
   cursor: pointer;
 }
+
+
+
+
+/* styles.css for project loader */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    border-color: #4CAF50; /* Set the border color for the full animation duration */
+  }
+  25% {
+    transform: translateY(-20px); /* Adjust the translateY value */
+    border-color: #09270a; /* Adjust the border color */
+  }
+}
+
+.loader {
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid transparent; /* Transparent border */
+  border-top-color: #4CAF50; /* Top border color */
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+
+
