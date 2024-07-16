@@ -29,14 +29,15 @@ import './Condition'
 // import Calculator from './Calculator';
 // import TicTacToe from './TicTacToe';
 // import CounterAlart from './CounterAlart';
-import AgeCalculator from './AgeCalculator';
+// import AgeCalculator from './AgeCalculator';
 // import CGPACalculator from './CGPACalculator';
 // import AnalogClock from './AnalogClock';
 // import DigitalClock from './DigitalClock';
 import Loader from './Loader';
-import Portfolio from './Portfolio';
-import Loading from './Loading';
-import LicenseCard from './LicenseCard';
+// import Portfolio from './Portfolio';
+// import Loading from './Loading';
+// import LicenseCard from './LicenseCard';
+import Converter from './Converter';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -185,7 +186,9 @@ function App() {
 
     {/* <Portfolio></Portfolio> */}
 
-    <LicenseCard></LicenseCard>
+    {/* <LicenseCard></LicenseCard> */}
+
+    <Converter></Converter>
 
       </div>
     )}
