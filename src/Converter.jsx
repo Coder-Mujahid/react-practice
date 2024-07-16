@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { toRoman, toArabic } from './converters_formula';
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
 
 const Converter = () => {
   const [english, setEnglish] = useState('');
   const [roman, setRoman] = useState('');
-  const [convertedRoman, setConvertedRoman] = useState('');
-  const [convertedEnglish, setConvertedEnglish] = useState('');
 
   const handleEnglishChange = (e) => {
     setEnglish(e.target.value);
@@ -16,11 +16,38 @@ const Converter = () => {
   };
 
   const convertToRoman = () => {
-    setConvertedRoman(toRoman(parseInt(english, 10)));
+    const value = parseInt(english, 10);
+    if (isNaN(value) || value <= 0) {
+      Swal.fire({
+        title: 'Invalid Input',
+        text: 'Please enter a valid number greater than 0',
+        icon: 'error'
+      });
+      return;
+    }
+    const result = toRoman(value);
+    Swal.fire({
+      title: `Conversion Result  is ${result}`,
+      text: `The numeral for ${english}`,
+      icon: 'success'
+    });
   };
 
   const convertToEnglish = () => {
-    setConvertedEnglish(toArabic(roman));
+    if (!roman.match(/^[MDCLXVI]+$/)) {
+      Swal.fire({
+        title: 'Invalid Input',
+        text: 'Please enter a valid Roman numeral',
+        icon: 'error'
+      });
+      return;
+    }
+    const result = toArabic(roman);
+    Swal.fire({
+      title: `Conversion Result is ${result}`,
+      text: `The number for ${roman} `,
+      icon: 'success'
+    });
   };
 
   return (
@@ -44,7 +71,6 @@ const Converter = () => {
           >
             Convert
           </button>
-          <div className="mt-2 p-2 border rounded bg-gray-100 text-center">{convertedRoman}</div>
         </div>
         
         <div className="mb-4">
@@ -62,7 +88,6 @@ const Converter = () => {
           >
             Convert
           </button>
-          <div className="mt-2 p-2 border rounded bg-gray-100 text-center">{convertedEnglish}</div>
         </div>
       </div>
     </div>
