@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 body {
-  font-family: 'Chakra Petch', sans-serif;
+  /* font-family: 'Chakra Petch', sans-serif;
+  font-family: "Montserrat", sans-serif; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .app-container {
     position: relative;
