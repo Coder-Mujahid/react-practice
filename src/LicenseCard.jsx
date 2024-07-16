@@ -174,9 +174,9 @@ const LicenseCard = () => {
 
             <div className='flex justify-between items-start md:gap-10 gap-5 md:flex-row flex-col tracking-widest w-full'>
               <span className=' basis-1/4'>{text[language].NID}:</span>
-              <p className=' text-[#333333] font-bold basis-1/4' > 78******38 </p>
+              <p className=' text-[#020202] font-bold basis-1/4' > 78******38 </p>
               <span className=' basis-1/4'>{text[language].office}:</span>
-              <p className=' text-[#333333] font-[700] basis-1/4' > THAKURGOAN</p>
+              <p className=' text-[#020202] font-[700] basis-1/4' > THAKURGOAN</p>
 
             </div>
           </div>
