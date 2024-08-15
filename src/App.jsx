@@ -37,7 +37,8 @@ import Loader from './Loader';
 // import Portfolio from './Portfolio';
 // import Loading from './Loading';
 // import LicenseCard from './LicenseCard';
-import Converter from './Converter';
+// import Converter from './Converter';
+import Bank from './BankingSystem';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -188,7 +189,9 @@ function App() {
 
     {/* <LicenseCard></LicenseCard> */}
 
-    <Converter></Converter>
+    {/* <Converter></Converter> */}
+
+    <Bank></Bank>
 
       </div>
     )}
