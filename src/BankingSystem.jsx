@@ -14,7 +14,7 @@ const BankingSystem = () => {
   const accountHolderName = "John Doe";
 
   // Maximum loan amount
-  const maxLoanAmount = 5000;
+  const maxLoanAmount = 1000;
 
   // Function to handle deposit
   const depositMoney = async () => {
@@ -30,23 +30,40 @@ const BankingSystem = () => {
       confirmButtonText: "Deposit",
       confirmButtonColor: "#22C55E",
     });
-
+  
     if (amount) {
-      setBalance(balance + parseFloat(amount));
+      let depositAmount = parseFloat(amount);
+      let newLoan = loan;
+      let newBalance = balance;
+  
+      if (loan > 0) {
+        if (depositAmount >= loan) {
+          depositAmount -= loan;
+          newLoan = 0;
+        } else {
+          newLoan -= depositAmount;
+          depositAmount = 0;
+        }
+      }
+  
+      newBalance += depositAmount;
+  
+      setLoan(newLoan);
+      setBalance(newBalance);
       setLastCredit(parseFloat(amount));
+  
       Swal.fire({
         icon: "success",
         title: "Success",
         text: `$${amount} has been deposited!`,
         confirmButtonText: "OK",
         customClass: {
-          confirmButton: 'bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700',
+          confirmButton: 'bg-green-500 outline-none text-white px-4 py-2 rounded hover:bg-green-700',
         },
         buttonsStyling: false,
       });
     }
   };
-
   // Function to handle withdrawal
   const withdrawMoney = async () => {
     const { value: amount } = await Swal.fire({
@@ -73,7 +90,7 @@ const BankingSystem = () => {
           text: `$${amount} has been withdrawn!`,
           confirmButtonText: "OK",
           customClass: {
-            confirmButton: 'bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700',
+            confirmButton: 'bg-red-500 outline-none text-white px-4 py-2 rounded hover:bg-red-700',
           },
           buttonsStyling: false,
         });
@@ -82,6 +99,10 @@ const BankingSystem = () => {
           icon: "error",
           title: "Insufficient balance!",
           text: `You don't have enough balance to withdraw $${amount}.`,
+          customClass: {
+            confirmButton: 'bg-red-500 text-white px-4 py-2 outline-none rounded hover:bg-red-700',
+          },
+          buttonsStyling: false,
         });
       }
     }
@@ -109,11 +130,11 @@ const BankingSystem = () => {
         setLastCredit(parseFloat(amount));
         Swal.fire({
           icon: "success",
-          title: "Loan Taken",
+          title: "Loan Taken success",
           text: `$${amount} loan has been taken!`,
           confirmButtonText: "OK",
           customClass: {
-            confirmButton: 'bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700',
+            confirmButton: 'bg-blue-500  outline-none text-white px-4 py-2 rounded hover:bg-blue-700',
           },
           buttonsStyling: false,
         });
@@ -122,6 +143,10 @@ const BankingSystem = () => {
           icon: "warning",
           title: "Max Loan Reached",
           text: "You have reached your maximum loan limit!",
+          customClass: {
+            confirmButton: 'bg-red-500 text-white px-4 py-2 outline-none rounded hover:bg-red-700',
+          },
+          buttonsStyling: false,
         });
       }
     }
